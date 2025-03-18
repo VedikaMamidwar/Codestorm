@@ -1,0 +1,234 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3e5f5;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #3d1c56;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: rgba(61, 28, 86, 0.95); /* Slight transparency */
+    position: fixed;
+    left: 0;
+    top: 65px;
+    bottom: 0;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    color: white;
+    text-decoration: none; /* Underline Removed */
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Active Menu */
+.sidebar ul li.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 4px solid yellow;
+}
+
+/* Container */
+.container {
+    margin-left: 270px;
+    padding: 100px 30px 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Event Grid */
+.event-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Event Card */
+.event-card {
+    padding: 20px;
+    width: 320px;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-bottom: 5px solid #3d1c56;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+/* Floating Glow Effect */
+.event-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    background: #3d1c56;
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.event-card:hover h2,
+.event-card:hover p {
+    color: white;
+}
+
+/* Hover Effect - Animated Glow */
+.event-card::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    top: -50%;
+    left: -50%;
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.event-card:hover::before {
+    transform: rotate(45deg) translateY(50px);
+}
+
+/* Enroll Button */
+.enroll-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #3d1c56;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.enroll-btn:hover {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Active Effect */
+.enroll-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: #3d1c56;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 999;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .container {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 80px 15px 30px 15px;
+    }
+
+    .sidebar {
+        transform: translateX(-100%); /* Hide Sidebar */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .event-card {
+        width: 100%;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .event-card {
+        width: 90%;
+        min-height: 180px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+}

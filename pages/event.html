@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Events | CodeStorm</title>
+    <link rel="stylesheet" href="../css/event.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">⚡ CodeStorm Events</div>
+        <div class="auth-icons">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+   
+<!-- Sidebar Navigation -->
+<nav class="sidebar">
+    <ul>
+        <li><span onclick="location.href='../pages/index.html'">Home</span></li>
+        <li><span onclick="location.href='#clubs'">🎭 Clubs</span></li>
+        <li><span onclick="location.href='#mentorship'">📖 Mentorship</span></li>
+        <li><span onclick="location.href='../pages/studentprofile.html'">📌 Dashboard</span></li>
+        <li><span onclick="location.href='#contact'">📞 Contact</span></li>
+        <li><button id="theme-toggle">🌙 Dark Mode</button></li>
+    </ul>
+</nav>
+
+
+    <main class="container">
+        <h1 class="page-title">🔥 Upcoming College Events</h1>
+
+        <div class="event-grid">
+
+            <!-- Event Cards -->
+            <div class="event-card">
+                <h2>⚙️ Tech Fest</h2>
+                <p>Experience AI, Robotics, and Coding challenges.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Tech Fest')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>💻 Hackathon</h2>
+                <p>Code for 24 hours & build innovative solutions.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Hackathon')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>🎭 Cultural Fest</h2>
+                <p>Music, dance & drama competitions.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Cultural Fest')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>⚽ Sports Meet</h2>
+                <p>Football, Basketball, and Athletics!</p>
+                <button class="enroll-btn" onclick="enrollEvent('Sports Meet')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>🚀 Startup Pitch</h2>
+                <p>Pitch your startup ideas & win funding.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Startup Pitch')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>🎮 Gaming Tournament</h2>
+                <p>Compete in Valorant, CS:GO & FIFA.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Gaming Tournament')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>📸 Photography Contest</h2>
+                <p>Capture stunning moments & win prizes.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Photography Contest')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>📚 Literary Fest</h2>
+                <p>Debates, poetry slams & creative writing.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Literary Fest')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>🔬 Science Fair</h2>
+                <p>Showcase your scientific innovations.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Science Fair')">Enroll Now</button>
+            </div>
+
+            <div class="event-card">
+                <h2>🌍 Social Service Drive</h2>
+                <p>Join community service & make a difference.</p>
+                <button class="enroll-btn" onclick="enrollEvent('Social Service Drive')">Enroll Now</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 CodeStorm Events | All Rights Reserved
+    </footer>
+
+</body>
+</html>
