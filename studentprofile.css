@@ -4,17 +4,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    color: white;
 }
 
+/* Body */
 body {
     display: flex;
     flex-direction: column;
-    background-color: #f3e5f5; /* Light purple background */
+    background-color: #f3e5f5;
     transition: background 0.3s, color 0.3s;
 }
 
-/* HEADER */
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -30,49 +30,28 @@ body {
     z-index: 1000;
 }
 
-/* Header Left - Login Icon */
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.auth-icons {
+    font-size: 20px;
 }
 
-.header-left i {
-    font-size: 22px;
+.auth-icons i {
+    margin-left: 15px;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
 
-.header-left i:hover {
+.auth-icons i:hover {
     color: yellow;
 }
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-right a {
-    text-decoration: none;
-    color: white; /* Default color */
-    transition: color 0.3s ease-in-out;
-    font-size: 20px;
-}
-
-.header-right a:hover {
-    color: yellow; /* Hover effect */
-}
-
 
 /* Sidebar */
 .sidebar {
     width: 260px;
-    background-color: #3d1c56; /* Dark Purple */
-    color: rgb(253, 248, 248);
+    background-color: #3d1c56;
+    color: white;
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 60px; /* Adjusted for header */
     bottom: 0;
     padding: 20px;
     border-top-right-radius: 20px;
@@ -119,6 +98,7 @@ body {
     cursor: pointer;
     border-radius: 10px;
     transition: background 0.3s ease-in-out;
+    color: white;
 }
 
 .sidebar ul li:hover {
@@ -147,10 +127,11 @@ body {
     background-color: rgba(255, 71, 87, 0.2);
 }
 
-/* ---- MAIN CONTENT AREA ---- */
+/* Main Content */
 .container {
     margin-left: 270px;
-    padding: 100px 30px 30px 30px;
+    margin-top: 80px;
+    padding: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -172,7 +153,7 @@ body {
 .flexbox {
     background: white;
     padding: 20px;
-    width: 300px;
+    width: 280px;
     min-height: 220px;
     display: flex;
     flex-direction: column;
@@ -182,10 +163,9 @@ body {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border-bottom: 5px solid #3d1c56; /* Dark Purple */
+    border-bottom: 5px solid #3d1c56;
 }
 
-/* Text inside Flexbox */
 .flexbox h2 {
     color: #3d1c56;
     font-size: 20px;
@@ -211,20 +191,7 @@ body {
     color: white;
 }
 
-/* FOOTER (Placed at the Top) */
-.footer {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    background: #3d1c56;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    z-index: 999;
-}
-
-/* Dark Mode Enhancements */
+/* Dark Mode */
 .dark-mode {
     background-color: #1a1a1a;
     color: white;
@@ -237,4 +204,15 @@ body {
 .dark-mode .flexbox {
     background: #3d1c56;
     color: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: #3d1c56;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
